@@ -1,3 +1,4 @@
+import datetime
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
@@ -41,20 +42,23 @@ def create_game_route():
 
 @app.route('/api/runner_data', methods=['GET'])
 def get_runner_data():
+    print(request.args)  
     player_id = request.args.get('player_id')  # Получите player_id из параметров запроса
     print(player_id)
     logging.debug(f"Получен player_id: {player_id}")
 
     if player_id is None:
-        return jsonify({'error': 'player_id не передан'}), 400  # Ошибка 400 если player_id не передан
+        return jsonify({'error': 'player_id не передан', 'error2': 'player_id не передан'}), 400  # Ошибка 400 если player_id не передан
     
     player = Player.query.get(player_id)
     
     if player is None:
         return jsonify({'error': 'Игрок не найден'}), 404
     
-    current_task = Task.query.get(player.current_task_id)
     
+    print("Наименование задания", player.current_task_id)
+    current_task = Task.query.get(player.current_task_id)
+    print(current_task)
     return jsonify({
         'points': player.points,
         'currentTask': {
@@ -70,37 +74,74 @@ def complete_task():
     data = request.get_json()
     task_id = data.get('task_id')
 
-    # Здесь нужно будет реализовать логику для обработки выполнения задания
-    # Например, добавление баллов убегающему
-    return jsonify({'message': 'Задание выполнено!'}), 200
+    # Ищем игрока по ID
+    player = Player.query.get(data.get('player_id'))
+    if not player:
+        return jsonify({'error': 'Игрок не найден'}), 404
+
+    # Ищем задание по ID
+    task = Task.query.get(task_id)
+    if not task:
+        return jsonify({'error': 'Задание не найдено'}), 404
+
+    # Начисляем очки игроку
+    player.points += task.cost
+    db.session.commit()
+
+    return jsonify({
+        'message': 'Задание выполнено!',
+        'points': player.points,
+    }), 200
 
 @app.route('/api/refuse_task', methods=['POST'])
 def refuse_task():
     data = request.get_json()
     task_id = data.get('task_id')
 
-    # Здесь нужно будет реализовать логику для обработки отказа от задания
-    return jsonify({'message': 'Вы отказались от задания.'}), 200
-
-@app.route('/api/get_new_task', methods=['POST'])
-def get_new_task():
-    data = request.get_json()
-    player_id = data.get('player_id')
-
     # Ищем игрока по ID
-    player = Player.query.get(player_id)
+    player = Player.query.get(data.get('player_id'))
     if not player:
         return jsonify({'error': 'Игрок не найден'}), 404
 
-    # Выбираем случайное задание
-    task = Task.query.order_by(func.random()).first()  # Получаем случайное задание
+    # Ищем задание по ID
+    task = Task.query.get(task_id)
+    if not task:
+        return jsonify({'error': 'Задание не найдено'}), 404
 
+    # Запускаем таймер на 10 минут
+    player.refuse_time = datetime.datetime.now() + datetime.timedelta(minutes=10)
+    db.session.commit()
+
+    return jsonify({
+        'message': 'Вы отказались от задания.',
+        'refuse_time': player.refuse_time,
+    }), 200
+
+@app.route('/api/get_new_task', methods=['POST'])
+def get_new_task():
+    print("new_task")
+    data = request.get_json()
+    player_id = data.get('player_id')
+    # Ищем игрока по ID
+    player = Player.query.get(player_id)
+    print(player)
+    if not player:
+        return jsonify({'error': 'Игрок не найден'}), 404
+
+    # Выбираем случайное задание из базы данных заданий
+    task = get_random_task_for_player()
+    print("task2",task)
     if task:
-        player.current_task_id = task.id  # Сохраняем текущее задание для игрока
-        db.session.commit()  # Сохраняем изменения в базе данных
+        # Присваиваем игроку новое задание
+        player.current_task_id = task.id
+        db.session.commit()
+        print(player.current_task_id)
         return jsonify({
-            'task_id': task.id,
-            'description': task.description,
+            'points': player.points,
+            'currentTask': {
+                'id': task.id,
+                'description': task.description,
+            }
         }), 200
     else:
         return jsonify({'error': 'Нет доступных заданий'}), 404
@@ -144,13 +185,16 @@ def join_game():
 
         # Ищем игрока по имени в этой игре
         player = Player.query.filter_by(game_id=game_id, name=player_name).first()
-
         if not player:
             return jsonify({'error': 'Игрок не найден в этой игре'}), 404
 
         # Возвращаем статус игрока (runner или chaser)
         return jsonify({
-            'status': player.status
+            'status': player.status,
+            'gameNumber': game_id,
+            'playerNumber': int(player.id),
+            'points': player.points,
+            'currentTask': player.current_task_id
         }), 200
 
     except Exception as e:

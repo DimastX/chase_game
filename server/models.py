@@ -92,7 +92,7 @@ class Task(db.Model):
 def get_random_task_for_player():
     # Получаем все задания из базы данных
     tasks = Task.query.all()
-    
+    print(tasks)
     if tasks:
         # Выбираем случайное задание
         return random.choice(tasks)
@@ -125,12 +125,12 @@ def create_game(password, player_names):
 
     db.session.commit()
     
-    # Наполнение базы данных
-    for task_data in tasks:
-        task = Task(description=task_data['description'], cost=task_data['cost'], difficulty=task_data['difficulty'])
-        db.session.add(task)
+    # # Наполнение базы данных
+    # for task_data in tasks:
+    #     task = Task(description=task_data['description'], cost=task_data['cost'], difficulty=task_data['difficulty'])
+    #     db.session.add(task)
 
-    # Сохранение изменений в базе данных
-    db.session.commit()
+    # # Сохранение изменений в базе данных
+    # db.session.commit()
 
     return jsonify({"message": "Game created successfully!"}), 201

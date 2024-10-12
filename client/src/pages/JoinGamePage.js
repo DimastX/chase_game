@@ -11,12 +11,14 @@ const JoinGamePage = () => {
     const handleJoinGame = async () => {
         try {
             const response = await joinGame(gameNumber, playerName, password); // Используем joinGame
-            const { status } = response.data;
+            console.log(response.data);
+            const { status, playerNumber: responsePlayerNumber, gameNumber: responseGameNumber } = response.data;
 
             // Сохраняем имя игрока и номер игры в localStorage
-            localStorage.setItem('playerName', playerName);
-            localStorage.setItem('gameNumber', gameNumber);
+            localStorage.setItem('playerNumber', responsePlayerNumber);
+            localStorage.setItem('gameNumber', responseGameNumber);
 
+            console.log('Игра сохранена:', { responsePlayerNumber, responseGameNumber });
             if (status === 'runner') {
                 navigate(`/runner/${gameNumber}`);
             } else if (status === 'chaser') {
