@@ -15,7 +15,7 @@ const JoinGamePage = () => {
             const { status, playerNumber: responsePlayerNumber, gameNumber: responseGameNumber } = response.data;
 
             // Сохраняем имя игрока и номер игры в localStorage
-            localStorage.setItem('playerNumber', responsePlayerNumber);
+            localStorage.setItem('playerName', responsePlayerNumber);
             localStorage.setItem('gameNumber', responseGameNumber);
 
             console.log('Игра сохранена:', { responsePlayerNumber, responseGameNumber });

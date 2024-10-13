@@ -228,7 +228,8 @@ def join_game():
         player = Player.query.filter_by(game_id=game_id, name=player_name).first()
         if not player:
             return jsonify({'error': 'Игрок не найден в этой игре'}), 404
-
+        print(player.name)
+        print(player.id)
         # Возвращаем статус игрока (runner или chaser)
         return jsonify({
             'status': player.status,
