@@ -61,6 +61,7 @@ def get_runner_data():
     print(current_task)
     return jsonify({
         'points': player.points,
+        'refuseTime': player.refuse_time,
         'currentTask': {
             'id': current_task.id,
             'description': current_task.description,

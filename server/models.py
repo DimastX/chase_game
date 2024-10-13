@@ -75,6 +75,7 @@ class Player(db.Model):
     order_number = db.Column(db.Integer)  # Поле order_number
     status = db.Column(db.String(50))  # Добавьте это поле для статуса
     points = db.Column(db.Integer, default=500)    # По умолчанию 500 очков
+    refuse_time = db.Column(db.DateTime)  # Время отказа
     current_task_id = db.Column(db.Integer, db.ForeignKey('tasks.id'))  # Ссылка на текущее задание
 
     # Другие атрибуты и отношения
@@ -125,12 +126,12 @@ def create_game(password, player_names):
 
     db.session.commit()
     
-    # # Наполнение базы данных
-    # for task_data in tasks:
-    #     task = Task(description=task_data['description'], cost=task_data['cost'], difficulty=task_data['difficulty'])
-    #     db.session.add(task)
+    # Наполнение базы данных
+    for task_data in tasks:
+        task = Task(description=task_data['description'], cost=task_data['cost'], difficulty=task_data['difficulty'])
+        db.session.add(task)
 
-    # # Сохранение изменений в базе данных
-    # db.session.commit()
+    # Сохранение изменений в базе данных
+    db.session.commit()
 
     return jsonify({"message": "Game created successfully!"}), 201

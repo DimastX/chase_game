@@ -17,6 +17,7 @@ const RunnerPage = () => {
             setRunnerData({
                 points: response.data.points,
                 currentTask: response.data.currentTask,
+                refuseTime: response.data.refuseTime,
             });
             console.log('Runner data:', response.data);
         } catch (error) {
@@ -38,22 +39,18 @@ const RunnerPage = () => {
       const handleRefuseTask = async () => {
         try {
           await axios.post(`${API_URL}/api/refuse_task`, { task_id: runnerData.currentTask.id, player_id: localStorage.getItem('playerName') });
-          const refuseTime = new Date().getTime() + 10 * 60 * 1000; // 10 минут в миллисекундах
-          setRunnerData({ ...runnerData, refuseTime });
           fetchRunnerData(); // Обновляем данные игрока после отказа от задания
           setMessage('Вы отказались от задания.');
-          setTimeout(() => {
-            setRunnerData({ ...runnerData, refuseTime: null });
-          }, 10 * 60 * 1000); // 10 минут в миллисекундах
         } catch (error) {
           setMessage('Ошибка при отказе от задания!');
         }
       };
 
     const handleGetNewTask = async () => {
-        if (runnerData && runnerData.refuseTime && new Date().getTime() < runnerData.refuseTime) {
-          setMessage('Вы не можете взять новое задание, пока не прошло 10 минут с момента отказа от выполнения задания.');
-          return;
+        const timeDifference = getTimeDifference();
+        if (timeDifference) {
+            setMessage(timeDifference);
+            return;
         }
         try {
           const playerId = localStorage.getItem('playerName');
@@ -62,6 +59,7 @@ const RunnerPage = () => {
           setRunnerData({
             points: response.data.points,
             currentTask: response.data.currentTask,
+            refuseTime: response.data.refuseTime,
           });
         } catch (error) {
           console.error('Ошибка при получении нового задания:', error);
@@ -73,10 +71,27 @@ const RunnerPage = () => {
         fetchRunnerData();
     }, []);
 
+    const getTimeDifference = () => {
+        const currentTime = new Date().getTime() + (3 * 60 * 60 * 1000);
+        const refuseTime = runnerData.refuseTime ? Date.parse(runnerData.refuseTime) : 0;
+        const diff = refuseTime - currentTime;
+        if (diff > 0) {
+            const minutes = Math.floor(diff / 60000);
+            const seconds = Math.floor((diff % 60000) / 1000);
+            return <p>Вы не можете взять новое задание, пока не пройдет {`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`} минут. До {runnerData.refuseTime}</p>;
+        }
+        return null;
+    };
+
     return (
+        
         <div>
+            {console.log('refuseTime перед сообщением:', runnerData.refuseTime)}
+            {console.log('new Date() перед сообщением:', new Date())}
             <h1>Интерфейс убегающего</h1>
             <p>Ваши баллы: {runnerData.points}</p>
+            {getTimeDifference()}
+            {console.log('refuseTime после сообщения:', runnerData.refuseTime)}
             {runnerData.currentTask && (
                 <>
                     <p>Текущее задание: {runnerData.currentTask?.description}, {runnerData.currentTask?.task_cost} очков</p>
