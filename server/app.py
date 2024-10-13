@@ -115,7 +115,7 @@ def refuse_task():
         return jsonify({'error': 'Задание не найдено'}), 404
 
     # Запускаем таймер на 10 минут
-    player.refuse_time = datetime.datetime.now() + datetime.timedelta(minutes=10)
+    player.refuse_time = datetime.datetime.now() + datetime.timedelta(minutes=task.refuse_time_minutes)
     db.session.commit()
 
     # Удаляем задание из формы игрока   

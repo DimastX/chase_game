@@ -87,7 +87,15 @@ class Task(db.Model):
     description = db.Column(db.String, nullable=False)
     cost = db.Column(db.Integer, nullable=False)
     difficulty = db.Column(db.String, nullable=False)  # 'easy', 'medium', 'hard'
+    refuse_time_minutes = db.Column(db.Integer, default=10)
+
     
+class Transport(db.Model):
+    __tablename__ = 'transports'
+
+    id = db.Column(db.Integer, primary_key=True)
+    type = db.Column(db.String(80), nullable=False)
+    cost = db.Column(db.Integer, nullable=False)
 
 
 def get_random_task_for_player():
