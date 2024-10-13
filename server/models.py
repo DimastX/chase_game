@@ -53,6 +53,14 @@ tasks = [
     {"description": "Купить только лаваш в шаверме", "cost": 1500, "difficulty": "hard"}
 ]
 
+transports = [
+    {"type": "Автобус/троллейбус","cost": 100}, 
+    {"type": "Метро","cost": 500},
+    {"type": "Трамвай","cost": 150},
+    {"type": "Самокат", "cost": 30},
+    {"type": "Электричка", "cost": 250},
+]
+
 from sqlalchemy.orm import backref
 
 
@@ -77,6 +85,23 @@ class Player(db.Model):
     points = db.Column(db.Integer, default=500)    # По умолчанию 500 очков
     refuse_time = db.Column(db.DateTime)  # Время отказа
     current_task_id = db.Column(db.Integer, db.ForeignKey('tasks.id'))  # Ссылка на текущее задание
+
+    def deduct_transport_cost(self, transport_id, stops):
+            print("Вызван метод deduct_transport_cost")
+            transport = Transport.query.get(transport_id)
+            print("Транспорт:", transport)
+            if transport and int(transport.cost) * int(stops) <= int(self.points):
+                print("Списываем транспортный расход...")
+                self.points -= int(transport.cost) * int(stops)
+                db.session.commit()
+                print("Транспортный расход списан успешно!")
+                return True
+            else:
+                print(int(transport.cost))
+                print(stops)
+                print(int(self.points))
+                print("Недостаточно очков для списания транспортного расхода!")
+                return False
 
     # Другие атрибуты и отношения
 
@@ -138,7 +163,10 @@ def create_game(password, player_names):
     for task_data in tasks:
         task = Task(description=task_data['description'], cost=task_data['cost'], difficulty=task_data['difficulty'])
         db.session.add(task)
-
+    
+    for transport_data in transports:
+        transport = Transport(type=transport_data['type'], cost=transport_data['cost'])
+        db.session.add(transport)
     # Сохранение изменений в базе данных
     db.session.commit()
 

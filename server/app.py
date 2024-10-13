@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
-from models import create_game, db, Game, Player, Task, get_random_task_for_player  # Импортируем db и Game из models.py
+from models import create_game, db, Game, Player, Task, Transport,get_random_task_for_player  # Импортируем db и Game из models.py
 import random
 import logging
 
@@ -42,9 +42,7 @@ def create_game_route():
 
 @app.route('/api/runner_data', methods=['GET'])
 def get_runner_data():
-    print(request.args)  
     player_id = request.args.get('player_id')  # Получите player_id из параметров запроса
-    print(player_id)
     logging.debug(f"Получен player_id: {player_id}")
 
     if player_id is None:
@@ -55,10 +53,7 @@ def get_runner_data():
     if player is None:
         return jsonify({'error': 'Игрок не найден'}), 404
     
-    
-    print("Наименование задания", player.current_task_id)
     current_task = Task.query.get(player.current_task_id)
-    print(current_task)
     return jsonify({
         'points': player.points,
         'refuseTime': player.refuse_time,
@@ -129,23 +124,19 @@ def refuse_task():
 
 @app.route('/api/get_new_task', methods=['POST'])
 def get_new_task():
-    print("new_task")
     data = request.get_json()
     player_id = data.get('player_id')
     # Ищем игрока по ID
     player = Player.query.get(player_id)
-    print(player)
     if not player:
         return jsonify({'error': 'Игрок не найден'}), 404
 
     # Выбираем случайное задание из базы данных заданий
     task = get_random_task_for_player()
-    print("task2",task)
     if task:
         # Присваиваем игроку новое задание
         player.current_task_id = task.id
         db.session.commit()
-        print(player.current_task_id)
         return jsonify({
             'points': player.points,
             'currentTask': {
@@ -172,6 +163,45 @@ def get_games():
         })
 
     return jsonify(games_list)
+
+@app.route('/api/runner_transport', methods=['POST'])
+def runner_transport():
+    data = request.get_json()
+    runner_id = data['runner_id']
+    transport_id = data['transport_id']
+    stops = data['stops']
+    print('runner_id:', runner_id, 'transport_id:', transport_id, 'stops:', stops)
+    runner = Player.query.get(runner_id)
+    if runner:
+        if runner.deduct_transport_cost(transport_id, stops):
+            print('Транспортный расход успешно списан!')
+            return jsonify({'message': 'Транспортный расход успешно списан!'}), 200
+        else:
+            print('Недостаточно очков!')
+            return jsonify({'error': 'Недостаточно очков!'}), 400
+    else:
+        print('Игрок не найден!')
+        return jsonify({'error': 'Игрок не найден!'}), 404
+    
+@app.route('/api/transports', methods=['GET'])
+def get_transports():
+    transports = Transport.query.all()
+    return jsonify([{'id': t.id, 'type': t.type, 'cost': t.cost} for t in transports])
+
+
+@app.route('/catch', methods=['POST'])
+def catch():
+    player_id = request.json['player_id']
+    player = Player.query.get(player_id)
+    game_id = player.game_id
+    players = Player.query.filter_by(game_id=game_id).order_by(Player.order_number.asc()).all()
+    statuses = [player.status for player in players]
+    statuses = statuses[-1:] + statuses[:-1]  # сместить статусы на одну по кругу
+    for i, player in enumerate(players):
+        player.status = statuses[i]
+    db.session.commit()
+    return jsonify({'message': 'Роли игроков изменены'})
+
 
 @app.route('/join-game', methods=['POST'])
 def join_game():
