@@ -27,44 +27,46 @@ const RunnerPage = () => {
 
     const handleCompleteTask = async () => {
         try {
-            await axios.post(`${API_URL}/api/complete_task`, { task_id: runnerData.currentTask.id, player_id: localStorage.getItem('playerName') });
-            fetchRunnerData(); // Обновляем данные игрока после выполнения задания
-            setMessage('Задание выполнено!');
+          await axios.post(`${API_URL}/api/complete_task`, { task_id: runnerData.currentTask.id, player_id: localStorage.getItem('playerName') });
+          fetchRunnerData(); // Обновляем данные игрока после выполнения задания
+          setMessage('Задание выполнено!');
         } catch (error) {
-            setMessage('Ошибка при выполнении задания!');
+          setMessage('Ошибка при выполнении задания!');
         }
-    };
-    
-    const handleRefuseTask = async () => {
+      };
+      
+      const handleRefuseTask = async () => {
         try {
-            await axios.post(`${API_URL}/api/refuse_task`, { task_id: runnerData.currentTask.id, player_id: localStorage.getItem('playerName') });
-            const refuseTime = new Date().getTime() + 10 * 60 * 1000; // 10 минут в миллисекундах
-            setRunnerData({ ...runnerData, refuseTime });
-            fetchRunnerData(); // Обновляем данные игрока после отказа от задания
-            setMessage('Вы отказались от задания.');
-            setTimeout(() => {
-                setRunnerData({ ...runnerData, refuseTime: null });
-            }, 10 * 60 * 1000); // 10 минут в миллисекундах
+          await axios.post(`${API_URL}/api/refuse_task`, { task_id: runnerData.currentTask.id, player_id: localStorage.getItem('playerName') });
+          const refuseTime = new Date().getTime() + 10 * 60 * 1000; // 10 минут в миллисекундах
+          setRunnerData({ ...runnerData, refuseTime });
+          fetchRunnerData(); // Обновляем данные игрока после отказа от задания
+          setMessage('Вы отказались от задания.');
+          setTimeout(() => {
+            setRunnerData({ ...runnerData, refuseTime: null });
+          }, 10 * 60 * 1000); // 10 минут в миллисекундах
         } catch (error) {
-            setMessage('Ошибка при отказе от задания!');
+          setMessage('Ошибка при отказе от задания!');
         }
-    };
+      };
 
     const handleGetNewTask = async () => {
-        try {
-            console.log(localStorage.getItem('playerNumber'));
-            const playerId = localStorage.getItem('playerNumber');
-            const response = await axios.post(`${API_URL}/api/get_new_task`, { player_id: playerId });
-            console.log('Новое задание:', response.data);
-            setRunnerData({
-                points: response.data.points,
-                currentTask: response.data.currentTask,
-            });
-            // Обновите данные игрока с новым заданием
-        } catch (error) {
-            console.error('Ошибка при получении нового задания2:', error);
+        if (runnerData && runnerData.refuseTime && new Date().getTime() < runnerData.refuseTime) {
+          setMessage('Вы не можете взять новое задание, пока не прошло 10 минут с момента отказа от выполнения задания.');
+          return;
         }
-    };
+        try {
+          const playerId = localStorage.getItem('playerName');
+          const response = await axios.post(`${API_URL}/api/get_new_task`, { player_id: playerId });
+          console.log('Новое задание:', response.data);
+          setRunnerData({
+            points: response.data.points,
+            currentTask: response.data.currentTask,
+          });
+        } catch (error) {
+          console.error('Ошибка при получении нового задания:', error);
+        }
+      };
     
 
     useEffect(() => {
@@ -75,16 +77,20 @@ const RunnerPage = () => {
         <div>
             <h1>Интерфейс убегающего</h1>
             <p>Ваши баллы: {runnerData.points}</p>
-            <p>Текущее задание: {runnerData.currentTask?.description || 'Нет задания'}</p>
             {runnerData.currentTask && (
                 <>
+                    <p>Текущее задание: {runnerData.currentTask?.description}, {runnerData.currentTask?.task_cost} очков</p>
                     <button onClick={handleCompleteTask}>Задание выполнено</button>
                     <button onClick={handleRefuseTask}>Отказаться от задания</button>
                 </>
             )}
-            {!runnerData.currentTask && (
-                <button onClick={handleGetNewTask}>Получить новое задание</button>
-            )}
+        {runnerData ? (
+        runnerData.currentTask ? null : (
+            <button onClick={handleGetNewTask}>Получить новое задание</button>
+        )
+        ) : (
+        <button onClick={handleGetNewTask}>Получить новое задание</button>
+        )}
             {message && <p>{message}</p>}
         </div>
     );

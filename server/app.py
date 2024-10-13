@@ -88,9 +88,14 @@ def complete_task():
     player.points += task.cost
     db.session.commit()
 
+    # Удаляем задание из формы игрока
+    player.current_task_id = None
+    db.session.commit()
+
     return jsonify({
         'message': 'Задание выполнено!',
         'points': player.points,
+        'task_cost': task.cost,
     }), 200
 
 @app.route('/api/refuse_task', methods=['POST'])
@@ -110,6 +115,10 @@ def refuse_task():
 
     # Запускаем таймер на 10 минут
     player.refuse_time = datetime.datetime.now() + datetime.timedelta(minutes=10)
+    db.session.commit()
+
+    # Удаляем задание из формы игрока   
+    player.current_task_id = None
     db.session.commit()
 
     return jsonify({
@@ -141,6 +150,7 @@ def get_new_task():
             'currentTask': {
                 'id': task.id,
                 'description': task.description,
+                'task_cost': task.cost,
             }
         }), 200
     else:
