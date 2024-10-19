@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://chasegametestapi.dimastx.keenetic.link';
 
 
 export const getWelcomeMessage = async () => {
@@ -10,7 +10,7 @@ export const getWelcomeMessage = async () => {
 
 // src/services/api.js
 export const createGame = async (gameData) => {
-    const response = await fetch('http://localhost:5000/create-game', {
+    const response = await fetch(`${API_URL}/create-game`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
