@@ -8,6 +8,7 @@ import RunnerPage from './pages/RunnerPage';      // Импортируем ст
 import ChaserPage from './pages/ChaserPage';      // Импортируем страницу догоняющего
 
 const App = () => {
+    console.log('Запуск приложения...');
     return (
         <Router>
             <div style={{ padding: '20px', textAlign: 'center' }}>

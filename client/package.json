@@ -14,7 +14,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start --host 0.0.0.0",
+    "start": "react-scripts start --host 0.0.0.0",
     "setup-npm": "npm install -g npm@10.7.0",
     "build": "react-scripts build",
     "test": "react-scripts test",

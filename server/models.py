@@ -159,15 +159,15 @@ def create_game(password, player_names):
 
     db.session.commit()
     
-    # Наполнение базы данных
-    for task_data in tasks:
-        task = Task(description=task_data['description'], cost=task_data['cost'], difficulty=task_data['difficulty'])
-        db.session.add(task)
+    # # Наполнение базы данных
+    # for task_data in tasks:
+    #     task = Task(description=task_data['description'], cost=task_data['cost'], difficulty=task_data['difficulty'])
+    #     db.session.add(task)
     
-    for transport_data in transports:
-        transport = Transport(type=transport_data['type'], cost=transport_data['cost'])
-        db.session.add(transport)
-    # Сохранение изменений в базе данных
-    db.session.commit()
+    # for transport_data in transports:
+    #     transport = Transport(type=transport_data['type'], cost=transport_data['cost'])
+    #     db.session.add(transport)
+    # # Сохранение изменений в базе данных
+    # db.session.commit()
 
     return jsonify({"message": "Game created successfully!"}), 201

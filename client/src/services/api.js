@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://chasegametestapi.dimastx.keenetic.link';
+const API_URL = 'https://chasegametestapi.dimastx.keenetic.link';
 
 
 export const getWelcomeMessage = async () => {

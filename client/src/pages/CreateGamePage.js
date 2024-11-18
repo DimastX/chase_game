@@ -47,33 +47,30 @@ const CreateGamePage = () => {
             {successMessage && <div style={{ color: 'green' }}>{successMessage}</div>}
 
             <div>
-                <label>
-                    Пароль игры:
-                    <input 
-                        type="text" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                    />
-                </label>
+                <div className="form-group">
+                    <label>Пароль игры:<input type="password" className="form-control" value={password} onChange={e => setPassword(e.target.value)} /> </label>
+                </div>
             </div>
 
             <div>
                 <h4>Имена игроков:</h4>
                 {playerNames.map((name, index) => (
-                    <div key={index}>
-                        <label>
-                            Игрок {index + 1}:
+                    <div className="form-group row" key={index}>
+                        <label htmlFor={`playerName${index}`}>Игрок {index + 1}: </label>
+                        <div className="col-sm-10">
                             <input 
-                                type="text" 
+                                className="form-control"
+                                type="text"
+                                id = {`playerName${index}`}
                                 value={name} 
                                 onChange={(e) => handlePlayerNameChange(index, e.target.value)} 
                             />
-                        </label>
+                        </div>
                     </div>
                 ))}
             </div>
 
-            <button onClick={handleCreateGame}>Создать игру</button>
+            <button className="btn btn-primary" onClick={handleCreateGame}>Создать игру</button>
         </div>
     );
 };

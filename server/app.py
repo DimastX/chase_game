@@ -1,6 +1,7 @@
 import datetime
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import socket
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 from models import create_game, db, Game, Player, Task, Transport,get_random_task_for_player  # Импортируем db и Game из models.py
@@ -245,4 +246,5 @@ def join_game():
         return jsonify({'error': 'Произошла ошибка на сервере'}), 500
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    ssl_context = ('ssl\\server.crt', 'ssl\\server.key')
+    app.run(host="0.0.0.0", port=5000, ssl_context=ssl_context, debug=True)

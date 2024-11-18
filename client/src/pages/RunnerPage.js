@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_URL = "http://chasegametestapi.dimastx.keenetic.link";
+const API_URL = "https://chasegametestapi.dimastx.keenetic.link";
 
 const fetchTransports = async () => {
     try {
@@ -20,6 +20,7 @@ const RunnerPage = () => {
     const [transportId, setTransportId] = useState(null);
     const [stops, setStops] = useState(0);
     const [transports, setTransports] = useState([]);
+    
 
 
     const fetchRunnerData = async () => {
@@ -108,6 +109,7 @@ const RunnerPage = () => {
             player_id: localStorage.getItem('playerName'),
           });
           console.log(response.data);
+          window.location.href = '/';
         } catch (error) {
           console.error(error);
         }
@@ -138,34 +140,40 @@ const RunnerPage = () => {
             {runnerData.currentTask && (
                 <>
                     <p>Текущее задание: {runnerData.currentTask?.description}, {runnerData.currentTask?.task_cost} очков</p>
-                    <button onClick={handleCompleteTask}>Задание выполнено</button>
-                    <button onClick={handleRefuseTask}>Отказаться от задания</button>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <button className="btn btn-primary" onClick={handleCompleteTask}>Задание выполнено</button>
+                        <br/>
+                        <button className="btn btn-primary" onClick={handleRefuseTask}>Отказаться от задания</button>
+                    </div>
                 </>
             )}
         {runnerData ? (
         runnerData.currentTask ? null : (
-            <button onClick={handleGetNewTask}>Получить новое задание</button>
+            <button className="btn btn-primary" onClick={handleGetNewTask}>Получить новое задание</button>
         )
         ) : (
-        <button onClick={handleGetNewTask}>Получить новое задание</button>
+        <button className="btn btn-primary" onClick={handleGetNewTask}>Получить новое задание</button>
         )}
         <form>
+          <br></br>
+
                 <label>Транспорт:</label>
-                <select value={transportId} onChange={(e) => setTransportId(e.target.value)}>
+                <select className="form-select" value={transportId} onChange={(e) => setTransportId(e.target.value)}>
                     {transports.map((transport) => (
                         <option key={transport.id} value={transport.id}>{transport.type}</option>
                     ))}
                 </select>
                 <br />
-                <label>Количество остановок:</label>
-                <input type="number" value={stops} onChange={(e) => setStops(e.target.value)} />
+                <label>Количество остановок: <input type="number" className="form-control" value={stops} onChange={e => setStops(e.target.value)} /></label>
                 <br />
-                <button onClick={(e) => handleTransportCostDeduction(e)}>
+                <button className="btn btn-primary" onClick={(e) => handleTransportCostDeduction(e)}>
                     Списать транспортный расход
                 </button>
             </form>
             {message && <p>{message}</p>}
-            <button onClick={handleCatch}>Меня поймали</button>
+            <br></br>
+            <br></br>
+            <button className="btn btn-primary" onClick={handleCatch}>Меня поймали</button>
         </div>
     );
 };
