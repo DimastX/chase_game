@@ -2,6 +2,8 @@ import datetime
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import socket
+import os
+
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 from models import create_game, db, Game, Player, Task, Transport,get_random_task_for_player  # Импортируем db и Game из models.py
@@ -61,6 +63,7 @@ def get_runner_data():
         'currentTask': {
             'id': current_task.id,
             'description': current_task.description,
+            'task_cost': current_task.cost
         } if current_task else None
     })
 
@@ -94,6 +97,36 @@ def complete_task():
         'points': player.points,
         'task_cost': task.cost,
     }), 200
+
+@app.route('/api/get_task_by_difficulty', methods=['POST'])
+def get_task_by_difficulty():
+  data = request.get_json()
+  player_id = data.get('player_id')
+  difficulty = data.get('difficulty')
+
+  # Получаем задания из базы данных в зависимости от выбранной категории
+  tasks = Task.query.filter_by(difficulty=difficulty).all()
+
+  # Выбираем три случайных задания
+  tasks = random.sample(tasks, 3)
+
+  return jsonify([{'id': task.id, 'description': task.description, 'task_cost': task.cost} for task in tasks])
+
+@app.route('/api/choose_task', methods=['POST'])
+def choose_task():
+  data = request.get_json()
+  player_id = data.get('player_id')
+  task_id = data.get('task_id')
+
+  # Выбираем задание
+  task = Task.query.get(task_id)
+
+  # Присваиваем игроку новое задание
+  player = Player.query.get(player_id)
+  player.current_task_id = task.id
+  db.session.commit()
+
+  return jsonify({'points': player.points, 'currentTask': {'id': task.id, 'description': task.description, 'task_cost': task.cost}})
 
 @app.route('/api/refuse_task', methods=['POST'])
 def refuse_task():
@@ -246,5 +279,9 @@ def join_game():
         return jsonify({'error': 'Произошла ошибка на сервере'}), 500
 
 if __name__ == '__main__':
-    ssl_context = ('ssl\\server.crt', 'ssl\\server.key')
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    ssl_context = (
+    os.path.join(BASE_DIR, 'ssl', 'server.crt'),
+    os.path.join(BASE_DIR, 'ssl', 'server.key')
+)
     app.run(host="0.0.0.0", port=5000, ssl_context=ssl_context, debug=True)

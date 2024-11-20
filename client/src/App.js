@@ -14,7 +14,7 @@ const App = () => {
             <div style={{ padding: '20px', textAlign: 'center' }}>
                 <h1>Добро пожаловать в игру!</h1>
                 <nav>
-                    <Link to="/" style={{ margin: '10px' }}>Главная</Link>
+                    {/* <Link to="/" style={{ margin: '10px' }}>Главная</Link> */}
                     <Link to="/create-game" style={{ margin: '10px' }}>Создать игру</Link>
                     <Link to="/game-list" style={{ margin: '10px' }}>Список игр</Link>
                     <Link to="/join-game" style={{ margin: '10px' }}>Присоединиться к игре</Link> {/* Ссылка на страницу подключения */}

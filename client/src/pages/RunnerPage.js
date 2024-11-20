@@ -12,7 +12,6 @@ const fetchTransports = async () => {
     }
   };
 
-
 const RunnerPage = () => {
     const [runnerData, setRunnerData] = useState({ points: null, currentTask: null, refuseTime: null });
     const [message, setMessage] = useState('');
@@ -20,8 +19,19 @@ const RunnerPage = () => {
     const [transportId, setTransportId] = useState(null);
     const [stops, setStops] = useState(0);
     const [transports, setTransports] = useState([]);
-    
+    const [tasks, setTasks] = useState([]);
 
+    
+    const handleGetTaskByDifficulty = async (difficulty) => {
+      try {
+        const playerId = localStorage.getItem('playerName');
+        const response = await axios.post(`${API_URL}/api/get_task_by_difficulty`, { player_id: playerId, difficulty: difficulty });
+        console.log('Задания:', response.data);
+        setTasks(response.data);
+      } catch (error) {
+        console.error('Ошибка при получении заданий:', error);
+      }
+    };
 
     const fetchRunnerData = async () => {
         try {
@@ -81,6 +91,18 @@ const RunnerPage = () => {
           setMessage('Вы отказались от задания.');
         } catch (error) {
           setMessage('Ошибка при отказе от задания!');
+        }
+      };
+
+      const handleChooseTask = async (task) => {
+        try {
+          const playerId = localStorage.getItem('playerName');
+          const response = await axios.post(`${API_URL}/api/choose_task`, { player_id: playerId, task_id: task.id });
+          console.log('Задание выбрано:', response.data);
+          setRunnerData(response.data);
+          setTasks([]); // сбрасываем задания на выбор
+        } catch (error) {
+          console.error('Ошибка при выборе задания:', error);
         }
       };
 
@@ -148,12 +170,42 @@ const RunnerPage = () => {
                 </>
             )}
         {runnerData ? (
-        runnerData.currentTask ? null : (
-            <button className="btn btn-primary" onClick={handleGetNewTask}>Получить новое задание</button>
-        )
+          runnerData.currentTask ? null : (
+            <div>
+              {tasks.length === 0 && (
+                <div>
+                  <h2 style={{ marginBottom: '20px' }}>Выберите задание:</h2>
+                  <button className="btn btn-primary" onClick={() => handleGetTaskByDifficulty('easy')}>Получить простое задание</button>
+                  <button className="btn btn-primary" onClick={() => handleGetTaskByDifficulty('medium')}>Получить среднее задание</button>
+                  <button className="btn btn-primary" onClick={() => handleGetTaskByDifficulty('hard')}>Получить сложное задание</button>
+                </div>
+              )}
+          </div>
+          )
         ) : (
-        <button className="btn btn-primary" onClick={handleGetNewTask}>Получить новое задание</button>
+          <div>
+            {tasks.length === 0 && (
+              <div>
+                <h2 style={{ marginBottom: '20px' }}>Выберите задание:</h2>
+                <button className="btn btn-primary" onClick={() => handleGetTaskByDifficulty('easy')}>Получить простое задание</button>
+                <button className="btn btn-primary" onClick={() => handleGetTaskByDifficulty('medium')}>Получить среднее задание</button>
+                <button className="btn btn-primary" onClick={() => handleGetTaskByDifficulty('hard')}>Получить сложное задание</button>
+              </div>
+            )}
+          </div>
         )}
+        {tasks && !runnerData.currentTask && (
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {tasks.map((task) => (
+              <div key={task.id} style={{ margin: '10px' }}>
+                <button className="btn btn-primary" style={{ fontSize: '16px', width: '200px', padding: '10px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'normal', height: 'auto' }} onClick={() => handleChooseTask(task)}>
+                  {task.description} ({task.task_cost} очков)
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+
         <form>
           <br></br>
 
