@@ -18,6 +18,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///games.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)  # Инициализируем db
 
+logging.basicConfig(filename='app.log', level=logging.INFO)
+
 # Создание базы данных
 with app.app_context():
     db.create_all()
@@ -77,15 +79,18 @@ def complete_task():
     # Ищем игрока по ID
     player = Player.query.get(data.get('player_id'))
     if not player:
+        logging.error('Игрок не найден')
         return jsonify({'error': 'Игрок не найден'}), 404
 
     # Ищем задание по ID
     task = Task.query.get(task_id)
     if not task:
+        logging.error('Задание не найдено')
         return jsonify({'error': 'Задание не найдено'}), 404
 
     # Начисляем очки игроку
     player.points += task.cost
+    logging.info('Пользователь {} получил {} очков за задание {}'.format(player.name, task.cost, task.description))
     db.session.commit()
 
     # Удаляем задание из формы игрока
@@ -109,6 +114,9 @@ def get_task_by_difficulty():
 
   # Выбираем три случайных задания
   tasks = random.sample(tasks, 3)
+
+  logging.info('Пользователь {} получил 3 задания на выбор с уровнем сложности {}'.format(player_id, difficulty))
+
 
   return jsonify([{'id': task.id, 'description': task.description, 'task_cost': task.cost} for task in tasks])
 
@@ -136,11 +144,13 @@ def refuse_task():
     # Ищем игрока по ID
     player = Player.query.get(data.get('player_id'))
     if not player:
+        logging.error('Игрок не найден при отказе от задания')
         return jsonify({'error': 'Игрок не найден'}), 404
 
     # Ищем задание по ID
     task = Task.query.get(task_id)
     if not task:
+        logging.error('Задание не найдено при отказе от него')
         return jsonify({'error': 'Задание не найдено'}), 404
 
     # Запускаем таймер на 10 минут
@@ -149,6 +159,7 @@ def refuse_task():
 
     # Удаляем задание из формы игрока   
     player.current_task_id = None
+    logging.info('Пользователь {} отказался от задания {}'.format(player.name, task.description))
     db.session.commit()
 
     return jsonify({
@@ -208,12 +219,15 @@ def runner_transport():
     runner = Player.query.get(runner_id)
     if runner:
         if runner.deduct_transport_cost(transport_id, stops):
+            logging.info('Пользователь {} списал транспортный расход на {} очков за {} остановок'.format(runner.name, runner.deduct_transport_cost(transport_id, stops), stops))
             print('Транспортный расход успешно списан!')
             return jsonify({'message': 'Транспортный расход успешно списан!'}), 200
         else:
+            logging.info('Пользователю {} не хватило очков для списания транспортного расхода на {} остановок'.format(runner.name, stops))
             print('Недостаточно очков!')
             return jsonify({'error': 'Недостаточно очков!'}), 400
     else:
+        logging.error('Игрок не найден при списании транспорта')
         print('Игрок не найден!')
         return jsonify({'error': 'Игрок не найден!'}), 404
     
