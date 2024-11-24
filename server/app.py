@@ -18,7 +18,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///games.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)  # Инициализируем db
 
-logging.basicConfig(filename='app.log', level=logging.INFO)
+logging.basicConfig(filename='app.log', level=logging.INFO, encoding='utf-8')
+logging.getLogger().setLevel(logging.INFO)
 
 # Создание базы данных
 with app.app_context():

@@ -1,2 +1,66 @@
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:43:17] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:43:43] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:43:43] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:19] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:19] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:19] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:19] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "GET /api/runner_data?player_id=11&game_number=4 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "GET /api/runner_data?player_id=11&game_number=4 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:20] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:31] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь Мишаня получил 200 очков за задание Найди нелегальное объявление
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:31] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:44:32] "GET /api/runner_data?player_id=11&game_number=4 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:12] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:13] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:13] "GET /api/runner_data?player_id=11&game_number=4 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:13] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:13] "GET /api/runner_data?player_id=11&game_number=4 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:13] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:22] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ 11 РїРѕР»СѓС‡РёР» 3 Р·Р°РґР°РЅРёСЏ РЅР° РІС‹Р±РѕСЂ СЃ СѓСЂРѕРІРЅРµРј СЃР»РѕР¶РЅРѕСЃС‚Рё easy
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:22] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:30] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:31] "POST /api/choose_task HTTP/1.1" 200 -
