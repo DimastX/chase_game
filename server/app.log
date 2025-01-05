@@ -64,3 +64,718 @@ INFO:root:Пользователь 11 получил 3 задания на вы�
 INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:22] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
 INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:30] "OPTIONS /api/choose_task HTTP/1.1" 200 -
 INFO:werkzeug:192.168.1.1 - - [24/Nov/2024 07:48:31] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:58:43] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:07] "OPTIONS /create-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:07] "[35m[1mPOST /create-game HTTP/1.1[0m" 201 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:09] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:09] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:13] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:13] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:16] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:16] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:23] "OPTIONS /create-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:23] "[35m[1mPOST /create-game HTTP/1.1[0m" 201 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:27] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:27] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:33] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:33] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:44] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 14:59:44] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:02:37] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:02:37] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:02:52] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:02:52] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:05:18] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:05:18] "GET /api/runner_data?player_id=23&game_number=8 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:05:18] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:05:48] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:05:48] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:06] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:06] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:07] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:08] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:13] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:13] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:13] "GET /api/runner_data?player_id=23&game_number=8 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:13] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:13] "GET /api/runner_data?player_id=23&game_number=8 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:06:13] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:31:28] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 20 получил 300 очков за задание Поедь на следующем транспорте, который придёт на ближайшую остановку как минимум 2 остановки. Монетки не списываются
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:31:29] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:31:29] "GET /api/runner_data?player_id=23&game_number=8 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:31:31] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 23 получил 3 задания на выбор с уровнем сложности hard
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:31:31] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:31:51] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:31:51] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:04] "OPTIONS /create-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:04] "[35m[1mPOST /create-game HTTP/1.1[0m" 201 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:12] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:12] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:18] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:18] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:18] "GET /api/runner_data?player_id=26&game_number=9 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:18] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:18] "GET /api/runner_data?player_id=26&game_number=9 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:19] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:20] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 2000 получил 300 очков за задание Поедь на следующем транспорте, который придёт на ближайшую остановку как минимум 2 остановки. Монетки не списываются
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:20] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:20] "GET /api/runner_data?player_id=26&game_number=9 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:25] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 26 получил 3 задания на выбор с уровнем сложности easy
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:25] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:27] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:27] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:28] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 2000 получил 500 очков за задание Сообщи на каком транспорте и на какую остановку ты поедешь своим преследователям
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:28] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:29] "GET /api/runner_data?player_id=26&game_number=9 HTTP/1.1" 200 -
+INFO:root:Пользователь 26 получил 3 задания на выбор с уровнем сложности hard
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:29] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:30] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 2000 получил 1000 очков за задание Найти человека с цветами и спросить, кому они предназначены
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:32] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:32] "GET /api/runner_data?player_id=26&game_number=9 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:33] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 26 получил 3 задания на выбор с уровнем сложности medium
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:34] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:34] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [29/Dec/2024 15:32:34] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:23] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:24] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:32] "OPTIONS /create-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:32] "[35m[1mPOST /create-game HTTP/1.1[0m" 201 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:33] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:33] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:42] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:42] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:42] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:42] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:43] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:43] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:43] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:48] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 300 очков за задание Поедь на следующем транспорте, который придёт на ближайшую остановку как минимум 2 остановки. Монетки не списываются
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:48] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [05/Jan/2025 22:43:48] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:26:59] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:26:59] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:01] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:01] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:02] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:02] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:26] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:26] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:26] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:26] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:26] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:27] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:31] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил 3 задания на выбор с уровнем сложности easy
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:31] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:34] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:27:35] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:03] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 100 очков за задание Найти припаркованный велосипед
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:03] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:03] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:04] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил 3 задания на выбор с уровнем сложности medium
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:04] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:10] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:10] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:16] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:16] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:16] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:16] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:16] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:29:16] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:04] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [39, 12, 13]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:04] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:10] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:10] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:13] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 50 очков за задание Найти дуб или берёзу и дотронуться
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:13] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:13] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:37] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [9, 16, 6]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:37] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:38] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:38] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:39] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 200 очков за задание Поедь на следующем транспорте, который придёт на ближайшую остановку как минимум 2 остановки
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:40] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:40] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [1, 15, 13]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:40] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:42] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 100 очков за задание Найти припаркованный велосипед
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:42] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:43] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:44] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [2, 11, 1]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:44] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:45] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:45] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:46] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 200 очков за задание Найти книгу, название которой начинается на букву «М»
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:46] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:46] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [26, 2, 14]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:46] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:48] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 200 очков за задание Найти и сфотографировать скульптуру на здании
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:49] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:49] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:50] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [19, 12, 16]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:50] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:50] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:52] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:52] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 100 очков за задание Найти велокурьера (Деливери Клаб / Яндекс еда)
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:53] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:53] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [3, 7, 20]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:54] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:54] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 0 очков за задание Доедь до ближайшего большого парка/сквера. Монетки за транспорт не списываются
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:55] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:55] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:56] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [14, 23, 12]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:56] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:58] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:58] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:59] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 150 очков за задание Найти и сфотографировать уличные часы
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:59] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:56:59] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [20, 12, 4]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:00] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:01] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 100 очков за задание Следующие 30 минут тебе нельзя пользоваться транспортом, где можно оплатить проезд «подорожником»
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:02] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:02] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:02] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [5, 12, 7]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:02] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:03] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:04] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 100 очков за задание Найти прохожего в костюме или рубашке
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:04] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:04] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [7, 6, 19]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:05] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:05] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:05] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 200 очков за задание Доедь до водоёма
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:06] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:06] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [19, 14, 4]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:07] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:07] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:49] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:49] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:49] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:49] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:49] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:49] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:49] "GET /api/transports HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [2, 19, 6]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:49] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:50] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 100 очков за задание Пройди через подземный переход
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:51] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:51] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:53] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:53] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 300 очков за задание Найди нелегальное объявление
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:54] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:54] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:55] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [6, 19, 4]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:55] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:57] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:57] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 100 очков за задание Сделать селфи на детской площадке
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:57] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:58] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [5, 6, 13]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:57:58] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:58:00] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:58:00] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 150 очков за задание Найти знак «кирпич»
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:58:00] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:58:01] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:58:01] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [6, 1, 5]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 01:58:01] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:11] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:11] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:13] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 100 очков за задание Найдите уличное графити
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:13] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:13] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:14] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [5, 1, 4]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:14] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:16] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 250 очков за задание Найдите магазин в котором продаются сувениры
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:16] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:16] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [5, 14, 20]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:17] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:27] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:27] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:28] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 получил 250 очков за задание Найдите магазин в котором продаются сувениры
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:28] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:05:28] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:41] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 28 получил задания с уровнем сложности easy. Номера заданий: [9, 11, 1]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:41] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:42] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:42] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:43] "OPTIONS /api/refuse_task HTTP/1.1" 200 -
+INFO:root:Пользователь 1 отказался от задания Найти книгу, название которой начинается на букву «М»
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:43] "POST /api/refuse_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:43] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:53] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:53] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:54] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:54] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:55] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:55] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:57] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:57] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:57] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:09:58] "GET /api/runner_data?player_id=28&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:13] "OPTIONS /catch HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:13] "POST /catch HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:22] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:22] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:22] "GET /api/runner_data?player_id=29&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:23] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:23] "GET /api/runner_data?player_id=29&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:23] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:25] "OPTIONS /api/refuse_task HTTP/1.1" 200 -
+INFO:root:Пользователь 2 отказался от задания Поедь на следующем транспорте, который придёт на ближайшую остановку как минимум 2 остановки
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:25] "POST /api/refuse_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:25] "GET /api/runner_data?player_id=29&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:27] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:27] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:28] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:28] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:29] "[31m[1mPOST /api/get_task_by_difficulty HTTP/1.1[0m" 403 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:11:31] "GET /api/runner_data?player_id=29&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:21] "GET /api/runner_data?player_id=29&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:21] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:21] "GET /api/runner_data?player_id=29&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:21] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:39] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:39] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:39] "GET /api/runner_data?player_id=29&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:39] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:39] "GET /api/runner_data?player_id=29&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:39] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:44] "OPTIONS /catch HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:44] "POST /catch HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:49] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:49] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:50] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:50] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:50] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:50] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:51] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 200 очков за задание Поедь на следующем транспорте, который придёт на ближайшую остановку как минимум 2 остановки
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:51] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:51] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:54] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на True очков за 1 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:54] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:55] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:59] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности easy. Номера заданий: [11, 2, 15]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:13:59] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:00] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:00] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:02] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 300 очков за задание Найди нелегальное объявление
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:02] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:02] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности easy. Номера заданий: [16, 7, 23]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:03] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:04] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 100 очков за задание Найти велокурьера (Деливери Клаб / Яндекс еда)
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:05] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:05] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:08] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на True очков за 1 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:08] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:08] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:16] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на False очков за 1 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:16] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:14:16] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:39] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:39] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:50] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности easy. Номера заданий: [15, 4, 7]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:50] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:51] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:51] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:54] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 100 очков за задание Найти припаркованный велосипед
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:54] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:54] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:55] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности hard. Номера заданий: [35, 38, 36]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:55] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:56] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 250 очков за задание Дойти до ближайшей улицы с брусчаткой
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:56] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:15:57] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:16:03] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на True очков за 2 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:16:03] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:16:03] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:46] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:46] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:46] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:46] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:46] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:46] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:47] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности easy. Номера заданий: [26, 9, 7]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:47] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:48] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:48] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:49] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 200 очков за задание Поедь на следующем транспорте, который придёт на ближайшую остановку как минимум 2 остановки
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:49] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:49] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:53] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на False очков за 2 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:53] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:17:53] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:09] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности medium. Номера заданий: [32, 29, 10]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:09] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:11] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:11] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:12] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 250 очков за задание Сфотографируйте три разных вида уличных фонарей в одном кадре
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:12] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:12] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности medium. Номера заданий: [28, 31, 25]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:12] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:13] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 300 очков за задание Найдите уличную вывеску с орфографической ошибкой
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:14] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:14] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:21] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на True очков за 2 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:21] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:21] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:27] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на False очков за 1 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:27] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:18:27] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.60:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:22] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:23] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:23] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:23] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:23] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:23] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:24] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности medium. Номера заданий: [22, 25, 46]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:24] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:25] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:25] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:27] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 250 очков за задание Найти и сфотографировать уличного музыканта
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:27] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:27] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:30] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:30] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:34] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:35] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:37] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на True очков за 1 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:37] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:37] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:40] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности medium. Номера заданий: [34, 10, 28]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:40] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:41] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:41] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:42] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 150 очков за задание Сообщи на каком транспорте и на какую остановку ты поедешь своим преследователям
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:42] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:42] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:48] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на False очков за 1 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:48] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:48] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:49] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности medium. Номера заданий: [32, 17, 8]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:49] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:50] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:50] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:51] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 300 очков за задание Накорми хотя бы 10 птиц
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:51] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:51] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности medium. Номера заданий: [18, 28, 24]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:52] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:52] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 250 очков за задание Посетить ближайшую станцию метро и сделать фото с названием станции
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:53] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:53] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:55] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности hard. Номера заданий: [40, 44, 41]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:55] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:55] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:55] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:56] "OPTIONS /api/complete_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 300 очков за задание Найти памятник с протёртым носом и потереть
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:56] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:56] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности hard. Номера заданий: [44, 37, 47]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:57] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности hard. Номера заданий: [47, 33, 30]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:57] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:19:59] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:root:Пользователь 3 получил 500 очков за задание До конца твоего забега ты не можешь использовать телефон для навигации
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:00] "POST /api/complete_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:00] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:04] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:04] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:08] "OPTIONS /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:root:Пользователь 30 получил задания с уровнем сложности easy. Номера заданий: [6, 26, 23]
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:08] "POST /api/get_task_by_difficulty HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:10] "OPTIONS /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:10] "POST /api/choose_task HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:14] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:14] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:15] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:15] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:15] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:41] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:41] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:41] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:20:41] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:06] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:06] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:06] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:07] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:07] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:07] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:07] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:07] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:12] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на True очков за 1 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:12] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:12] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:38] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:38] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:42] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:42] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:43] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:43] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:43] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:43] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:47] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:47] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:49] "[35m[1mPOST /api/runner_transport HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:52] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал транспортный расход на True очков за 1 остановок
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:52] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:21:52] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
+INFO:werkzeug: * Restarting with stat

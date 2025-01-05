@@ -1,5 +1,6 @@
 import datetime
 from flask import Flask, jsonify, request
+from flask_migrate import Migrate
 from flask_cors import CORS
 import socket
 import os
@@ -8,7 +9,12 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 from models import create_game, db, Game, Player, Task, Transport,get_random_task_for_player  # Импортируем db и Game из models.py
 import random
+from models import update_tasks
 import logging
+
+from telebot.util import extract_arguments
+import hashlib
+import hmac
 
 app = Flask(__name__)
 CORS(app)
@@ -17,6 +23,9 @@ CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///games.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)  # Инициализируем db
+migrate = Migrate(app, db)
+
+
 
 logging.basicConfig(filename='app.log', level=logging.INFO, encoding='utf-8')
 logging.getLogger().setLevel(logging.INFO)
@@ -31,6 +40,39 @@ with app.app_context():
 def welcome():
     return jsonify({"message": "Добро пожаловать в API игры!"})
 
+
+@app.route('/api/verify-telegram-user', methods=['POST'])
+def verify_telegram_user():
+    data = request.get_json()
+    init_data = data.get('initData')
+    
+    # Verify the data from Telegram Mini App
+    # Return user's games and auth token
+    return jsonify({
+        'verified': True,
+        'games': Game.query.filter_by(telegram_user_id=data.get('user_id')).all(),
+        'auth_token': generate_auth_token(data.get('user_id'))
+    })
+
+def generate_auth_token(user_id):
+    # Implement your token generation logic here
+    # For example, you could use a library like PyJWT
+    # or implement a simple token generation method
+    return f"auth_token_{user_id}"  # Placeholder implementation
+
+@app.route('/api/update-location', methods=['POST'])
+def update_location():
+    data = request.get_json()
+    player_id = data.get('player_id')
+    latitude = data.get('latitude')
+    longitude = data.get('longitude')
+    
+    player = Player.query.get(player_id)
+    player.latitude = latitude
+    player.longitude = longitude
+    db.session.commit()
+    
+    return jsonify({'status': 'success'})
 
 @app.route('/create-game', methods=['POST'])
 def create_game_route():
@@ -90,8 +132,10 @@ def complete_task():
         return jsonify({'error': 'Задание не найдено'}), 404
 
     # Начисляем очки игроку
-    player.points += task.cost
+    new_points = player.points + task.cost
+    player.points = min(new_points, 1000)
     logging.info('Пользователь {} получил {} очков за задание {}'.format(player.name, task.cost, task.description))
+    player.current_task_id = None
     db.session.commit()
 
     # Удаляем задание из формы игрока
@@ -104,38 +148,71 @@ def complete_task():
         'task_cost': task.cost,
     }), 200
 
+def check_refuse_timeout(player):
+    if player.refuse_time:
+        current_time = datetime.datetime.now()
+        if current_time < player.refuse_time:
+            return True
+    return False
+
 @app.route('/api/get_task_by_difficulty', methods=['POST'])
 def get_task_by_difficulty():
-  data = request.get_json()
-  player_id = data.get('player_id')
-  difficulty = data.get('difficulty')
-
-  # Получаем задания из базы данных в зависимости от выбранной категории
-  tasks = Task.query.filter_by(difficulty=difficulty).all()
-
-  # Выбираем три случайных задания
-  tasks = random.sample(tasks, 3)
-
-  logging.info('Пользователь {} получил 3 задания на выбор с уровнем сложности {}'.format(player_id, difficulty))
+    data = request.get_json()
+    player_id = data.get('player_id')
+    difficulty = data.get('difficulty')
+    player = Player.query.get(data.get('player_id'))
 
 
-  return jsonify([{'id': task.id, 'description': task.description, 'task_cost': task.cost} for task in tasks])
+    if check_refuse_timeout(player):
+        return jsonify({
+            'error': 'Действия заблокированы из-за отказа от задания',
+            'blocked_until': player.refuse_time.isoformat()
+        }), 403
+
+    player = Player.query.get(player_id)
+    completed_tasks = player.completed_tasks.split(',') if player.completed_tasks else []
+   
+    available_tasks = Task.query.filter_by(difficulty=difficulty).filter(~Task.id.in_(completed_tasks)).all()
+
+    # Если доступных заданий меньше 3, сбрасываем список выполненных
+    if len(available_tasks) < 3:
+        player.completed_tasks = ''
+        db.session.commit()
+        available_tasks = Task.query.filter_by(difficulty=difficulty).all()
+
+    # Выбираем три случайных задания
+    tasks = random.sample(available_tasks, 3)
+
+    task_ids = [task.id for task in tasks]
+    logging.info('Пользователь {} получил задания с уровнем сложности {}. Номера заданий: {}'.format(
+        player_id, 
+        difficulty,
+        task_ids
+    ))
+
+    return jsonify([{'id': task.id, 'description': task.description, 'task_cost': task.cost} for task in tasks])
 
 @app.route('/api/choose_task', methods=['POST'])
 def choose_task():
-  data = request.get_json()
-  player_id = data.get('player_id')
-  task_id = data.get('task_id')
+    data = request.get_json()
+    player_id = data.get('player_id')
+    task_id = data.get('task_id')
 
-  # Выбираем задание
-  task = Task.query.get(task_id)
+    # Выбираем задание
+    player = Player.query.get(player_id)
+    task = Task.query.get(task_id)
 
-  # Присваиваем игроку новое задание
-  player = Player.query.get(player_id)
-  player.current_task_id = task.id
-  db.session.commit()
+    if player.completed_tasks:
+        player.completed_tasks = f"{player.completed_tasks},{task_id}"
+    else:
+        player.completed_tasks = str(task_id)
 
-  return jsonify({'points': player.points, 'currentTask': {'id': task.id, 'description': task.description, 'task_cost': task.cost}})
+    # Присваиваем игроку новое задание
+    player = Player.query.get(player_id)
+    player.current_task_id = task.id
+    db.session.commit()
+
+    return jsonify({'points': player.points, 'currentTask': {'id': task.id, 'description': task.description, 'task_cost': task.cost}})
 
 @app.route('/api/refuse_task', methods=['POST'])
 def refuse_task():
@@ -155,7 +232,8 @@ def refuse_task():
         return jsonify({'error': 'Задание не найдено'}), 404
 
     # Запускаем таймер на 10 минут
-    player.refuse_time = datetime.datetime.now() + datetime.timedelta(minutes=task.refuse_time_minutes)
+    # player.refuse_time = datetime.datetime.now() + datetime.timedelta(minutes=task.refuse_time_minutes)
+    player.refuse_time = datetime.datetime.now() + datetime.timedelta(minutes=3)
     db.session.commit()
 
     # Удаляем задание из формы игрока   
@@ -216,21 +294,32 @@ def runner_transport():
     runner_id = data['runner_id']
     transport_id = data['transport_id']
     stops = data['stops']
-    print('runner_id:', runner_id, 'transport_id:', transport_id, 'stops:', stops)
+    
+    if not transport_id:
+        return jsonify({'error': 'Транспорт не выбран'}), 400
+        
     runner = Player.query.get(runner_id)
-    if runner:
-        if runner.deduct_transport_cost(transport_id, stops):
-            logging.info('Пользователь {} списал транспортный расход на {} очков за {} остановок'.format(runner.name, runner.deduct_transport_cost(transport_id, stops), stops))
-            print('Транспортный расход успешно списан!')
-            return jsonify({'message': 'Транспортный расход успешно списан!'}), 200
-        else:
-            logging.info('Пользователю {} не хватило очков для списания транспортного расхода на {} остановок'.format(runner.name, stops))
-            print('Недостаточно очков!')
-            return jsonify({'error': 'Недостаточно очков!'}), 400
-    else:
+    if not runner:
         logging.error('Игрок не найден при списании транспорта')
-        print('Игрок не найден!')
         return jsonify({'error': 'Игрок не найден!'}), 404
+
+    if check_refuse_timeout(runner):
+        return jsonify({
+            'error': 'Действия заблокированы из-за отказа от задания',
+            'blocked_until': runner.refuse_time.isoformat()
+        }), 403
+
+    transport = Transport.query.get(transport_id)
+    cost = transport.cost * int(stops)
+    if runner.points >= cost:
+        runner.points -= cost
+        db.session.commit()
+        logging.info(f'Пользователь {runner.name} списал {cost} очков за {stops} остановок на {transport.type}')
+        return jsonify({'message': 'Транспортный расход списан', 'points': runner.points}), 200
+    else:
+        logging.info(f'Пользователю {runner.name} не хватило очков для списания транспортного расхода')
+        return jsonify({'error': 'Недостаточно очков!'}), 400
+
     
 @app.route('/api/transports', methods=['GET'])
 def get_transports():
@@ -294,6 +383,7 @@ def join_game():
         return jsonify({'error': 'Произошла ошибка на сервере'}), 500
 
 if __name__ == '__main__':
+    update_tasks(app)
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     ssl_context = (
     os.path.join(BASE_DIR, 'ssl', 'server.crt'),

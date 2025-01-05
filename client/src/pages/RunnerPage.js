@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const API_URL = "https://chasegametestapi.dimastx.keenetic.link";
+// const API_URL = "http://localhost:5000";
 
 const fetchTransports = async () => {
     try {
@@ -211,6 +212,7 @@ const RunnerPage = () => {
 
                 <label>Транспорт:</label>
                 <select className="form-select" value={transportId} onChange={(e) => setTransportId(e.target.value)}>
+                <option value="">Выберите транспорт</option>
                     {transports.map((transport) => (
                         <option key={transport.id} value={transport.id}>{transport.type}</option>
                     ))}
