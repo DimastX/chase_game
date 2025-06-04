@@ -5,3 +5,5 @@
 /server\instance
 /server/instance
 /server/app.log
+/.supercode
+/ai-docs/business-logic.md

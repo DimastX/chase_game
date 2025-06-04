@@ -779,3 +779,65 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 599-512-660
 INFO:werkzeug: * Detected change in 'C:\\Work\\chase_game\\server\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:40] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:40] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:40] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:40] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:40] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:40] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:45] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:45] "[31m[1mPOST /api/runner_transport HTTP/1.1[0m" 400 -
+INFO:root:Пользователь 3 списал 150 очков за 1 остановок на Трамвай
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:47] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:47] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:51] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал 100 очков за 1 остановок на Автобус/троллейбус
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:51] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:51] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал 100 очков за 1 остановок на Автобус/троллейбус
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:52] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:25:53] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:27:55] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:27:55] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:27:57] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:27:57] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:27:57] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:27:57] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:05] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:05] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:05] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:05] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:05] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:05] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:09] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:10] "[31m[1mPOST /api/runner_transport HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:31] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:31] "GET /games HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:34] "OPTIONS /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:34] "POST /join-game HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:34] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:35] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:35] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:35] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:37] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:37] "[31m[1mPOST /api/runner_transport HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:59] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:28:59] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:29:04] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:29:04] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:29:04] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:29:04] "GET /api/transports HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:29:07] "OPTIONS /api/runner_transport HTTP/1.1" 200 -
+INFO:root:Пользователь 3 списал 100 очков за 1 остановок на Автобус/троллейбус
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:29:07] "POST /api/runner_transport HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.1 - - [06/Jan/2025 02:29:08] "GET /api/runner_data?player_id=30&game_number=10 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://10.17.223.88:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 599-512-660
